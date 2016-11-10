@@ -1,5 +1,5 @@
 var App = () => (
-  <div>
+<div>
     <Nav />
     <div className="col-md-7">
       <VideoPlayer/>
@@ -8,6 +8,7 @@ var App = () => (
       <VideoList/>
     </div>
   </div>
+
 );
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
