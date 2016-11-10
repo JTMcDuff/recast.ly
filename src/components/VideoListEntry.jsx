@@ -1,15 +1,17 @@
-var VideoListEntry = (prop) => (
-
+var VideoListEntry = (prop) => {
+  console.log(prop)
+  return (
   <div className="video-list-entry">
     <div className="media-left media-middle">
       <img className="media-object" src={prop.video.snippet.thumbnails.default.url} alt="" />
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title">{prop.video.snippet.title}</div>
+      <div onClick ={ () => prop.onClickFunction(prop.video) } className="video-list-entry-title">{prop.video.snippet.title}</div>
       <div className="video-list-entry-detail">{prop.video.snippet.description}</div>
     </div>
   </div>
-);
+  );
+}
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
